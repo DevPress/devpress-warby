@@ -1,0 +1,60 @@
+/* Content
+--------------------------------------------------------------*/
+
+.entry-header {
+	margin-bottom: 30px;
+}
+
+.entry-title {
+	line-height: 1.25;
+
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+.page-header {
+	padding: 15px 25px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 30px 0 0;
+}
+
+.page-title {
+	color: #333;
+	margin: 0;
+}
+
+.taxonomy-description {
+	margin-top: 1em;
+}
+
+.entry-meta {
+	color: #666;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+
+	a {
+		color: #666;
+	}
+
+}
+
+.entry-image-section {
+	position: relative;
+}
+
+.entry-image-link,
+.entry-image img {
+	display: block;
+}
+
+.entry-image {
+	display: block;
+	margin: 0 0 30px;
+}
+
+.entry-content,
+.author-meta,
+.entry-footer-meta {
+	margin: 0 0 30px;
+}

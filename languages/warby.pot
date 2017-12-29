@@ -1,0 +1,247 @@
+# <!=Copyright (C) 2017 DevPress
+# This file is distributed under the GNU General Public License v2 or later.=!>
+msgid ""
+msgstr ""
+"Project-Id-Version: Warby 1.0.0\n"
+"Report-Msgid-Bugs-To: https://devpress.com/\n"
+"POT-Creation-Date: 2017-12-29 23:34:41+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: grunt-wp-i18n1.0.1\n"
+
+#: 404.php:16
+msgid "404 - Page Not Found"
+msgstr ""
+
+#: 404.php:20
+msgid "The page you are looking for doesn't exist. Try a search?"
+msgstr ""
+
+#: comments.php:38 comments.php:60
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:41 comments.php:63
+msgid "Older Comments"
+msgstr ""
+
+#: comments.php:42 comments.php:64
+msgid "Newer Comments"
+msgstr ""
+
+#: comments.php:76
+msgid "Comments are closed."
+msgstr ""
+
+#: functions.php:44
+msgid "Top Menu"
+msgstr ""
+
+#: functions.php:45
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:46
+msgid "Footer Menu"
+msgstr ""
+
+#: functions.php:78
+msgid "Single Column"
+msgstr ""
+
+#: functions.php:79
+msgid "Narrow Column"
+msgstr ""
+
+#: functions.php:80
+msgid "Sidebar Right"
+msgstr ""
+
+#: functions.php:81
+msgid "Sidebar Left"
+msgstr ""
+
+#: functions.php:134 inc/extras.php:81
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:144 inc/customizer.php:72
+msgid "Footer"
+msgstr ""
+
+#: header.php:22
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:68
+msgid "Menu"
+msgstr ""
+
+#: inc/customizer.php:17
+msgid "Top Navigation"
+msgstr ""
+
+#: inc/customizer.php:27
+msgid "Top Navigation Text"
+msgstr ""
+
+#: inc/customizer.php:28
+msgid "Text will display in top navigation bar."
+msgstr ""
+
+#: inc/customizer.php:40
+msgid "Display Site Title"
+msgstr ""
+
+#: inc/customizer.php:51
+msgid "Display Site Description"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "Logo"
+msgstr ""
+
+#: inc/customizer.php:82
+msgid "Footer Text"
+msgstr ""
+
+#: inc/customizer.php:97
+msgid "Site Title, Tagline and Logo"
+msgstr ""
+
+#: inc/mods.php:36
+msgid "Powered by %s"
+msgstr ""
+
+#: inc/mods.php:37
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: inc/mods.php:41
+msgid "%1$s by %2$s."
+msgstr ""
+
+#: inc/template-tags.php:48 inc/template-tags.php:57
+#. translators: used between list items, there is a space after the comma
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:65 partials/content-page.php:24
+msgid "Edit"
+msgstr ""
+
+#: partials/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: partials/content-none.php:20
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: partials/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: partials/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: partials/content-page.php:18 partials/content-single.php:27
+#: partials/content.php:34
+msgid "Pages:"
+msgstr ""
+
+#: partials/content-single.php:41
+msgid "About %s"
+msgstr ""
+
+#: partials/content.php:30
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: search.php:11
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:11 searchform.php:12
+msgid "Search for:"
+msgstr ""
+
+#: searchform.php:12 searchform.php:15
+msgid "Search..."
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Warby"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://devpress.com/warby"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Warby allows you to quickly set up a website for your small business or "
+"organization."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "DevPress"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://devpress.com"
+msgstr ""
+
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:171
+#. Translators: If there are characters in your language that are not supported
+#. by Rubik, translate this to 'off'. Do not translate into your own language.
+msgctxt "Roboto font: active or inactive"
+msgid "active"
+msgstr ""
+
+#: inc/template-tags.php:24
+msgctxt "post date"
+msgid "%s"
+msgstr ""
+
+#: inc/template-tags.php:29
+msgctxt "post author"
+msgid "By %s"
+msgstr ""
+
+#: single.php:18
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span> %title"
+msgstr ""
+
+#: single.php:19
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""

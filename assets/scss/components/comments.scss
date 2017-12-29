@@ -1,0 +1,170 @@
+/* Comments
+--------------------------------------------------------------*/
+
+#comments {
+	border-top: 1px solid #f0f0f0;
+}
+
+.comments-title {
+	font-size: 1.75rem;
+	margin: 30px 0;
+	color: #666;
+}
+
+.no-comments {
+	margin:0;
+	padding: 30px 0;
+	text-align: center;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment-list {
+	margin: 0;
+	margin: 30px 0;
+	list-style: none;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.comment-list .children {
+	list-style: none;
+}
+
+.comment,
+.trackback,
+.pingback {
+	position: relative;
+	padding: 0 0 0 80px;
+}
+
+.comment-body {
+	margin: 0 0 20px 0;
+}
+
+.comment-author {
+	display: block;
+	font-size: 1.25rem;
+
+	.avatar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 100%;
+	}
+}
+
+.trackback .avatar,
+.pingback .avatar {
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+
+.comment-by-post-author .comment-author .fn:after {
+	font-family: 'warby-icons';
+	font-weight: normal;
+	content: '\f14b';
+	margin-left: 10px;
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.comment-meta {
+	padding-right: 80px;
+}
+
+.comment-metadata {
+	text-transform: uppercase;
+	font-size: 0.85rem;
+	margin-bottom: 30px;
+}
+
+.comment-reply {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.comment-reply-link:before {
+	display: inline-block;
+	font-family: 'warby-icons';
+	content: '\f112';
+	margin-right: 5px;
+}
+
+.comment-time {
+	display: inline-block;
+	margin-right: 10px;
+
+	a {
+		color: #666;
+	}
+}
+
+.comment-list .children {
+	margin: 0;
+}
+
+.comment-list .children .children .comment {
+	margin:0;
+}
+
+#reply-title {
+	color: #666;
+	margin-bottom: 30px;
+}
+
+#respond {
+	margin: 30px 0;
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	label {
+		margin-bottom: 2px;
+	}
+
+	textarea {
+		display: block;
+		width: 100%;
+	}
+
+	.placeholder {
+		color: #aaa;
+	}
+
+}
+
+.comment-list #respond {
+	padding: 30px 0;
+}
+
+#author,
+#email,
+#url {
+	width: 100%;
+}
+
+#cancel-comment-reply-link {
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+@media screen and (min-width:510px) {
+
+	#author,
+	#email,
+	#url {
+		width: 50%;
+	}
+
+	#respond textarea {
+		width: 80%;
+	}
+
+}

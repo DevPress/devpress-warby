@@ -1,0 +1,60 @@
+/* Theme Globals
+-------------------------------------------------------------- */
+
+html {
+	height: 100%;
+	font-size: 100%;
+}
+
+body {
+	font-family: $body-font;
+	background: $body-background;
+	color: $text-color;
+	font-size: $base-font-size;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	word-wrap: break-word;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* @noflip */
+body.rtl {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-font;
+	font-weight: 400;
+	margin-bottom: .5rem;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2.25rem;
+}
+
+h3 {
+	font-size: 1.75rem;
+}
+
+h4, h5, h6 {
+	font-size: 1.5rem;
+}
+
+a {
+	color: $highlight-color;
+	text-decoration: none;
+	transition: all 0.2s ease;
+	word-wrap: break-word;
+
+	&:hover {
+		color: darken( $highlight-color, 10% );
+		text-decoration: underline;
+	}
+}

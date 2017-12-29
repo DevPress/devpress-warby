@@ -1,0 +1,169 @@
+<?php
+/**
+ * Warby Theme Customizer
+ *
+ * @package Warby
+ */
+
+/**
+ * Adds controls to the customizer
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function warby_customize_controls( $wp_customize ) {
+
+	// Top Navigation Settings
+	$wp_customize->add_section( 'top-navigation' , array(
+		'title'      => __( 'Top Navigation', 'warby' ),
+		'priority'   => 20,
+	) );
+
+	$wp_customize->add_setting( 'top-navigation-text', array(
+		'default'           => '',
+		'sanitize_callback' => 'warby_sanitize_textarea'
+	) );
+
+	$wp_customize->add_control( 'top-navigation-text', array(
+		'label'    => __( 'Top Navigation Text', 'warby' ),
+		'description'    => __( 'Text will display in top navigation bar.', 'warby' ),
+		'section'  => 'top-navigation',
+		'type'     => 'textarea'
+	) );
+
+	// Header Settings
+	$wp_customize->add_setting( 'display-site-title', array(
+		'default'    =>  1,
+		'transport'  =>  'refresh'
+	) );
+
+	$wp_customize->add_control( 'display-site-title', array(
+		'label'     => __( 'Display Site Title', 'warby' ),
+		'section'   => 'title_tagline',
+		'type'      => 'checkbox'
+	) );
+
+	$wp_customize->add_setting( 'display-site-description', array(
+		'default'    =>  0,
+		'transport'  =>  'refresh'
+	) );
+
+	$wp_customize->add_control( 'display-site-description', array(
+		'label'     => __( 'Display Site Description', 'warby' ),
+		'section'   => 'title_tagline',
+		'type'      => 'checkbox'
+	) );
+
+	if ( ! function_exists( 'the_custom_logo' ) ) :
+		$wp_customize->add_setting( 'logo', array(
+			'sanitize_callback' => 'esc_url_raw',
+		) );
+
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo',
+			array(
+				'label'    => __( 'Logo', 'warby' ),
+				'section'  => 'title_tagline',
+				'settings' => 'logo'
+			)
+		) );
+	endif;
+
+	// Footer
+	$wp_customize->add_section( 'footer' , array(
+		'title'      => __( 'Footer', 'warby' ),
+		'priority'   => 100,
+	) );
+
+	$wp_customize->add_setting( 'footer-text', array(
+		'default'           => '',
+		'sanitize_callback' => 'warby_sanitize_textarea'
+	) );
+
+	$wp_customize->add_control( 'footer-text', array(
+		'label'    => __( 'Footer Text', 'warby' ),
+		'section'  => 'footer',
+		'type'     => 'textarea'
+	) );
+
+}
+add_action( 'customize_register', 'warby_customize_controls' );
+
+/**
+ * Changes header text of the "Site Title" section
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function warby_customize_headers( $wp_customize ) {
+
+	$wp_customize->get_section( 'title_tagline' )->title = __( 'Site Title, Tagline and Logo', 'warby' );
+
+}
+add_action( 'customize_register', 'warby_customize_headers' );
+
+/**
+ * Add postMessage support for site title and description for the Theme Customizer.
+ *
+ * @param WP_Customize_Manager $wp_customize Theme Customizer object.
+ */
+function warby_customize_transports( $wp_customize ) {
+
+	$wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+
+}
+add_action( 'customize_register', 'warby_customize_transports' );
+
+/**
+ * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
+ */
+function warby_customize_preview_js() {
+	wp_enqueue_script(
+		'warby_customizer',
+		get_template_directory_uri() . '/js/customizer.js',
+		array( 'customize-preview' ),
+		'1.0.0',
+		true
+	);
+}
+add_action( 'customize_preview_init', 'warby_customize_preview_js' );
+
+if ( ! function_exists( 'warby_sanitize_textarea' ) ) :
+/**
+ * Sanitize textarea.
+ *
+ * @param string $content
+ * @return string
+ */
+function warby_sanitize_textarea( $content ) {
+
+	if ( '' === $content ) {
+		return '';
+	}
+
+	return wp_kses( $content, wp_kses_allowed_html( 'post' ) );
+
+}
+endif;
+
+if ( ! function_exists( 'sanitize_hex_color' ) ) :
+/**
+ * Sanitizes a hex color.
+ *
+ * Returns either '', a 3 or 6 digit hex color (with #), or null.
+ * For sanitizing values without a #, see sanitize_hex_color_no_hash().
+ *
+ * @param string $color
+ * @return string|null
+ */
+function sanitize_hex_color( $color ) {
+	if ( '' === $color ) {
+		return '';
+	}
+
+	// 3 or 6 hex digits, or the empty string.
+	if ( preg_match('|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) {
+		return $color;
+	}
+
+	return null;
+}
+endif;

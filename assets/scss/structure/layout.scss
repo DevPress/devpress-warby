@@ -1,0 +1,77 @@
+/* Layout
+-------------------------------------------------------------- */
+
+#page {
+	flex: 1 0 auto;
+}
+
+#secondary {
+	display: none;
+}
+
+.content-area {
+	width: 100%;
+	padding-top: 15px;
+}
+
+.col-width {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+@media screen and (min-width: 880px ) {
+
+	.site-content #secondary-section {
+		overflow: hidden;
+		width: 280px;
+	}
+
+	#secondary {
+		display: block;
+	}
+
+}
+
+/* Sidebar Right */
+
+@media screen and (min-width: 880px ) {
+
+	.layout-sidebar-right .content-area {
+		float: left;
+		margin: 0 -280px 0 0;
+	}
+
+	.layout-sidebar-right .site-main {
+		margin: 0 310px 0 0;
+		padding: 30px 30px 30px 0;
+	}
+
+	.layout-sidebar-right .site-content #secondary-section {
+		float: right;
+		margin: 30px 0;
+	}
+
+}
+
+/* Sidebar Left */
+
+@media screen and (min-width: 880px ) {
+
+	.layout-sidebar-left .content-area {
+		float: right;
+		margin: 0 0 0 -280px;
+	}
+
+	.layout-sidebar-left .site-main {
+		margin: 0 0 0 310px;
+		padding: 30px 0 30px 30px;
+	}
+
+	.layout-sidebar-left .site-content #secondary-section {
+		float: left;
+		margin: 30px 0;
+	}
+
+}

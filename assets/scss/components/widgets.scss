@@ -1,0 +1,40 @@
+/* Widgets
+--------------------------------------------------------------*/
+
+#secondary .widget {
+	padding: 15px 30px;
+	margin-bottom: 30px;
+}
+
+.widget-title {
+	color: #333;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+.widget > ul,
+.widget > div > ul {
+	list-style: none;
+	margin-left: 0;
+}
+
+#calendar_wrap {
+	font-size: 0.9rem;
+	overflow-x: scroll;
+}
+
+#calendar_wrap th,
+#calendar_wrap td {
+	padding: 5px;
+}
+
+#offcanvas #secondary {
+
+	.widget {
+		padding: 0;
+	}
+
+}

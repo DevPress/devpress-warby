@@ -1,0 +1,87 @@
+/* Header
+-------------------------------------------------------------- */
+
+#page {
+	padding-top: 160px;
+}
+
+.site-header {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 20%, rgba(255, 255, 255, .9) 50%, rgba(255, 255, 255, 0) );
+	z-index: 5000;
+	padding: 0 0 30px;
+}
+
+.site-branding {
+
+	background: rgba(0,0,0,.03);
+
+	.col-width {
+		position: relative;
+		max-width: 100%;
+		padding-top: 28px;
+		padding-bottom: 28px;
+	}
+
+}
+
+.site-brand {
+	float: left;
+}
+
+.site-logo {
+	margin: 0;
+	line-height: 1;
+	float: left;
+	margin-right: 30px;
+
+	img {
+		max-height: 100px;
+	}
+}
+
+.brand-text {
+	float: left;
+}
+
+.site-title {
+	font-size: 2rem;
+	line-height: 1;
+	margin: 0;
+	margin-top: 10px;
+
+	a {
+		position: relative;
+		color: #444;
+		text-decoration: none;
+
+		&:hover {
+			color: #aaa;
+		}
+	}
+
+}
+
+.site-description {
+	font-size: 1rem;
+	line-height: 1;
+	margin: 0;
+	margin-top: 10px;
+}
+
+@media screen and (min-width:1160px) {
+
+	.brand {
+		max-width: 40%;
+		float: left;
+	}
+
+	#primary-navigation-section {
+		float: right;
+		max-width: 60%;
+		margin-top: 5px;
+		margin-right: -12px;
+	}
+}
