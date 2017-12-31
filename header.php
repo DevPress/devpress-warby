@@ -22,12 +22,10 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'warby' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-
 		<div class="site-branding">
+			<div class="col-width">
 
-			<div class="col-width clearfix">
 				<div class="brand">
-
 					<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
 						<?php the_custom_logo(); ?>
 					<?php else : ?>
@@ -42,7 +40,6 @@
 
 					<?php if ( warby_brand_text() ) : ?>
 					<div class="brand-text">
-
 						<?php if ( get_theme_mod( 'display-site-title', 1 ) ) : ?>
 							<div class="site-title">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -54,21 +51,13 @@
 						<?php if ( get_theme_mod( 'display-site-description', 0 ) && get_bloginfo( 'description' ) != '' ) : ?>
 							<div class="site-description"><?php bloginfo( 'description' ); ?></div>
 						<?php endif; ?>
-
 					</div>
 					<?php endif; ?>
-
 				</div>
 
 				<?php if ( has_nav_menu( 'primary' ) ) : ?>
 				<div id="primary-navigation-section">
 					<nav id="primary-navigation" class="navigation-menu clearfix" role="navigation">
-						<div class="menu-toggle">
-							<a href="#offcanvas" class="navigation-button">
-								<span class="screen-reader-text"><?php _e( 'Menu', 'warby' ); ?></span>
-								<span class="toggle"></span>
-							</a>
-						</div>
 						<?php wp_nav_menu( array(
 							'theme_location' => 'primary',
 							'link_before' => '<span>',
@@ -78,9 +67,9 @@
 					</nav>
 				</div>
 				<?php endif; ?>
-			</div>
-		</div>
 
+			</div><!-- .col-width -->
+		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content clearfix">

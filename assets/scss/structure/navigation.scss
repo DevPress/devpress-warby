@@ -20,10 +20,10 @@
 		padding: 15px 20px;
 		display: block;
 		text-decoration: none;
-		color: #555;
+		color: #222;
 
 		&:hover {
-			color: #aaa;
+			color: #666;
 		}
 	}
 
@@ -114,80 +114,7 @@
 
 }
 
-/* Mobile Toggle
--------------------------------------------------------------- */
-
-#primary-navigation {
-
-	.menu-toggle {
-		position: absolute;
-		right: 30px;
-		top: 45px;
-		vertical-align: middle;
-	}
-
-	.menu-toggle {
-
-		a {
-			box-shadow: none;
-			border: none;
-			display: block;
-			padding: 10px 30px 14px 0;
-		}
-
-		.toggle,
-		.toggle:before,
-		.toggle:after {
-			transition: all 100ms ease-in-out;
-			cursor: pointer;
-			border-radius: 2px;
-			height: 3px;
-			width: 28px;
-			background: #aaa;
-			position: absolute;
-			display: block;
-			content: '';
-		}
-
-		.toggle:before {
-			top: -8px;
-		}
-
-		.toggle:after {
-			bottom: -8px;
-		}
-
-	}
-}
-
-@media screen and ( min-width: 1160px ) {
-
-	#primary-navigation .menu-toggle {
-		display: none;
-	}
-
-}
-
-.offcanvas-open #primary-navigation .menu-toggle {
-
-	.toggle {
-		background-color: rgba(0, 0, 0, 0);
-
-		&::before {
-			transform: rotate(45deg);
-			top: 0;
-		}
-
-		&::after {
-			transform: translateY(-10px) rotate(-45deg);
-			top: 10px;
-		}
-
-	}
-
-}
-
-/* Top Menu and Footer Menu
+/* Footer Menu
 -------------------------------------------------------------- */
 
 #footer-navigation {

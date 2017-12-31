@@ -16,7 +16,7 @@
 function warby_body_classes( $classes ) {
 
 	if ( is_active_sidebar( 'primary' ) ) {
-		$classes[] = 'layout-sidebar-right';
+		// $classes[] = 'layout-sidebar-right';
 	}
 
 	return $classes;

@@ -34,11 +34,6 @@
 
 			} );
 
-			this.cache.$window.on( 'resize', self.debounce( function() {
-					$.sidr( 'close', 'offcanvas' );
-				}
-			) );
-
 		},
 
 		/**
