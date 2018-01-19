@@ -382,9 +382,6 @@ a {
   padding-right: 50px;
   padding-left: 50px; }
 
-#page {
-  flex: 1 0 auto; }
-
 #content .col-width {
   max-width: 860px; }
 
@@ -429,6 +426,8 @@ a {
 -------------------------------------------------------------- */
 #page {
   padding-top: 200px; }
+  .admin-bar #page {
+    padding-top: 232px; }
 
 .site-header {
   top: 0;
@@ -437,6 +436,8 @@ a {
   background-image: linear-gradient(to bottom, white, white 20%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0));
   z-index: 5000;
   padding: 0 0 50px; }
+  .admin-bar .site-header {
+    padding-top: 32px; }
 
 .site-branding {
   background: rgba(0, 0, 0, 0.03); }
@@ -480,6 +481,7 @@ a {
 /* Primary Menu
 -------------------------------------------------------------- */
 #primary-navigation {
+  display: inline-block;
   font-size: 0.9rem; }
   #primary-navigation ul {
     display: none;
@@ -495,11 +497,7 @@ a {
     color: #222; }
     #primary-navigation a:hover {
       color: #666; }
-
-@media screen and (min-width: 1160px) {
-  /* General Desktop Menu Styling */
-  #primary-navigation {
-    font-weight: 400; }
+  @media (min-width: 1280px) {
     #primary-navigation ul {
       display: block; }
     #primary-navigation li {
@@ -554,96 +552,15 @@ a {
     #primary-navigation ul ul li:last-child a {
       border-bottom: none; } }
 
-/* Footer Menu
--------------------------------------------------------------- */
-#footer-navigation {
-  background: #353535;
-  color: #ddd; }
-  #footer-navigation ul {
-    display: block;
-    margin: 0;
-    margin-left: -12px; }
-  #footer-navigation li {
-    display: inline-block; }
-  #footer-navigation a {
-    display: inline-block;
-    color: #ddd;
-    padding: 12px;
-    text-decoration: none; }
-    #footer-navigation a:hover {
-      color: #fff; }
-
-#footer-navigation a {
-  padding: 0 12px; }
-
-/* Social Icons
--------------------------------------------------------------- */
-.navigation-menu .social > a {
-  display: inline-block; }
-
-#page .navigation-menu .social span,
-#colophon .navigation-menu .social span {
-  margin: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden; }
-
-.navigation-menu .social a:before {
+.nav-search {
   display: inline-block;
-  font-family: 'warby-icons';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-#offcanvas .navigation-menu .social a:before {
-  margin-right: 10px; }
-
-.navigation-menu .social a[href*="behance.com"]:before {
-  content: '\f1b4'; }
-
-.navigation-menu .social a[href*="dribbble.com"]:before {
-  content: '\f17d'; }
-
-.navigation-menu .social a[href*="facebook.com"]:before {
-  content: '\f09a'; }
-
-.navigation-menu .social a[href*="flickr.com"]:before {
-  content: '\f16e'; }
-
-.navigation-menu .social a[href*="github.com"]:before {
-  content: '\f09b'; }
-
-.navigation-menu .social a[href*="linkedin.com"]:before {
-  content: '\f0e1'; }
-
-.navigation-menu .social a[href*="pinterest.com"]:before {
-  content: '\f0d2'; }
-
-.navigation-menu .social a[href*="plus.google.com"]:before {
-  content: '\f0d5'; }
-
-.navigation-menu .social a[href*="instagr.am"]:before,
-.navigation-menu .social a[href*="instagram.com"]:before {
-  content: '\f16d'; }
-
-.navigation-menu .social a[href*="skype.com"]:before {
-  content: '\f17e'; }
-
-.navigation-menu .social a[href*="spotify.com"]:before {
-  content: '\f1bc'; }
-
-.navigation-menu .social a[href*="tumblr.com"]:before {
-  content: '\f173'; }
-
-.navigation-menu .social a[href*="twitter.com"]:before {
-  content: '\f099'; }
-
-.navigation-menu .social a[href*="vimeo.com"]:before {
-  content: '\f194'; }
+  margin-left: 15px;
+  cursor: pointer; }
+  .nav-search img {
+    position: relative;
+    top: 2px; }
+  .nav-search:hover {
+    opacity: 0.6; }
 
 /* Content
 --------------------------------------------------------------*/
@@ -691,12 +608,11 @@ article {
   padding: 30px 0;
   background: #444;
   color: #ddd; }
-
-.footer-widgets .widget-title {
-  color: #eee;
-  padding-bottom: 10px;
-  margin-bottom: 30px;
-  border-bottom: 2px solid #666; }
+  .footer-widgets .widget-title {
+    color: #eee;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #666; }
 
 #colophon {
   padding-top: 20px;
@@ -748,6 +664,25 @@ article {
     text-align: right;
     margin-left: auto;
     margin-right: -12px; } }
+
+/* Footer Menu
+-------------------------------------------------------------- */
+#footer-navigation {
+  background: #353535;
+  color: #ddd; }
+  #footer-navigation ul {
+    display: block;
+    margin: 0;
+    margin-left: -12px; }
+  #footer-navigation li {
+    display: inline-block; }
+  #footer-navigation a {
+    display: inline-block;
+    color: #ddd;
+    padding: 12px;
+    text-decoration: none; }
+    #footer-navigation a:hover {
+      color: #fff; }
 
 /* Accessibility
 --------------------------------------------------------------*/
@@ -1180,6 +1115,66 @@ object {
 .more-link {
   display: block;
   margin-top: 20px; }
+
+/* Component: Search Modal
+--------------------------------------------------------------*/
+.site {
+  position: relative;
+  overflow: hidden; }
+  .search-open .site {
+    position: fixed;
+    width: 100%; }
+
+.search-modal {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: -1000%;
+  width: 100%;
+  min-height: 100vh; }
+  .search-modal::before {
+    content: '';
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity .25s; }
+  .search-open .search-modal {
+    display: block;
+    left: 0; }
+    .search-open .search-modal::before {
+      position: fixed;
+      opacity: 1; }
+  .search-modal .close-modal {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transform: rotate(0deg);
+    transition: color .2s, transform .2s; }
+    .search-modal .close-modal:hover {
+      color: orange;
+      transform: rotate(-90deg); }
+  .search-modal .flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    height: 100%;
+    padding: 60px 30px; }
+  .search-modal .search-container {
+    position: relative;
+    color: #fff;
+    padding: 40px; }
 
 /* Widgets
 --------------------------------------------------------------*/

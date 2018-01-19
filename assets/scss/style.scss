@@ -29,7 +29,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 // Structure
 @import "structure/layout";
 @import "structure/header";
-@import "structure/navigation";
 @import "structure/content";
 @import "structure/footer";
 
@@ -45,6 +44,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "components/media";
 @import "components/pagination";
 @import "components/post-meta";
+@import "components/search-modal";
 @import "components/widgets";
 
 // Templates

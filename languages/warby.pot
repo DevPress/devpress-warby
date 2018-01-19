@@ -1,14 +1,14 @@
-# <!=Copyright (C) 2017 DevPress
+# <!=Copyright (C) 2018 DevPress
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
 "Project-Id-Version: Warby 1.0.0\n"
 "Report-Msgid-Bugs-To: https://devpress.com/\n"
-"POT-Creation-Date: 2017-12-29 23:34:41+00:00\n"
+"POT-Creation-Date: 2018-01-19 22:45:22+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: en_US\n"
@@ -60,36 +60,16 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:78
-msgid "Single Column"
-msgstr ""
-
-#: functions.php:79
-msgid "Narrow Column"
-msgstr ""
-
-#: functions.php:80
-msgid "Sidebar Right"
-msgstr ""
-
-#: functions.php:81
-msgid "Sidebar Left"
-msgstr ""
-
-#: functions.php:134 inc/extras.php:81
+#: functions.php:113 inc/extras.php:81
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:144 inc/customizer.php:72
+#: functions.php:123 inc/customizer.php:72
 msgid "Footer"
 msgstr ""
 
 #: header.php:22
 msgid "Skip to content"
-msgstr ""
-
-#: header.php:68
-msgid "Menu"
 msgstr ""
 
 #: inc/customizer.php:17
@@ -219,7 +199,7 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: functions.php:171
+#: functions.php:150
 #. Translators: If there are characters in your language that are not supported
 #. by Rubik, translate this to 'off'. Do not translate into your own language.
 msgctxt "Roboto font: active or inactive"

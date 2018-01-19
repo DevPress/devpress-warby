@@ -10,15 +10,13 @@
 		// Cache selectors
 		cache: {
 			$document: $(document),
-			$window: $(window),
-			$page: $('#page')
+			$body: $('body'),
+			$window: $(window)
 		},
 
 		// Init functions
 		init: function() {
-
 			this.bindEvents();
-
 		},
 
 		// Bind Elements
@@ -26,13 +24,12 @@
 
 			var self = this;
 
-			self.navigationInit();
+			// self.navigationInit();
+			self.searchInit();
 
 			this.cache.$document.on( 'ready', function() {
-
 				self.fitVidsInit();
-
-			} );
+			});
 
 		},
 
@@ -48,6 +45,49 @@
 			// Add dropdown toggle to display child menu items
 			$('.main-navigation .menu > .menu-item-has-children').append( '<span class="dropdown-toggle" />');
 
+		},
+
+		/**
+		 * Search init.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @return void
+		 */
+		searchInit: function() {
+			var self = this;
+			var $nav_search = $('.nav-search');
+
+			$nav_search.on( 'click', function(e) {
+				e.preventDefault();
+				self.cache.$body.addClass('search-open');
+
+				$('.search-modal').on( 'click', function(e) {
+
+					if ( $(e.target).hasClass( 'widget_shopping_cart' ) ) {
+						return;
+					}
+
+					if ( $(e.target).closest('.widget_shopping_cart').length ) {
+						return;
+					}
+
+					self.searchClose();
+				});
+
+			});
+
+			document.addEventListener('keyup', function(ev) {
+				// Escape key
+				if ( ev.keyCode == 27 ) {
+					self.searchClose();
+				}
+			});
+
+		},
+
+		searchClose: function() {
+			this.cache.$body.removeClass('search-open');
 		},
 
 		// Initialize FitVids

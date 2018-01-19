@@ -65,29 +65,8 @@ function warby_setup() {
 		'image', 'gallery', 'video', 'quote', 'link'
 	) );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'warby_custom_background_args', array(
-		'default-color' => 'f2f2f2',
-		'default-image' => '',
-	) ) );
-
-	// Theme layouts
-	add_theme_support(
-		'theme-layouts',
-		array(
-			'single-column' => __( 'Single Column', 'warby' ),
-			'narrow-column' => __( 'Narrow Column', 'warby' ),
-			'sidebar-right' => __( 'Sidebar Right', 'warby' ),
-			'sidebar-left' => __( 'Sidebar Left', 'warby' )
-		),
-		array( 'default' => 'sidebar-right' )
-	);
-
 	// Excerpt support needed for page showcase template
 	add_post_type_support( 'page', 'excerpt' );
-
-	// Support custom logo feature
-	add_theme_support( 'custom-logo', array( 'size' => 'warby-showcase' ) );
 
 }
 add_action( 'after_setup_theme', 'warby_setup' );

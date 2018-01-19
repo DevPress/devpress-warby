@@ -18,59 +18,64 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'warby' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<div class="col-width">
+<div class="hfeed site">
+	<div id="page">
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'warby' ); ?></a>
 
-				<div class="brand">
-					<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
-						<?php the_custom_logo(); ?>
-					<?php else : ?>
-						<?php if ( get_theme_mod( 'logo', 0 ) ) : ?>
-						<div class="site-logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-								<img src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" alt="<?php esc_attr( get_bloginfo( 'name' ) ); ?>">
-							</a>
-						</div>
-						<?php endif; ?>
-					<?php endif; ?>
+		<header id="masthead" class="site-header" role="banner">
+			<div class="site-branding">
+				<div class="col-width">
 
-					<?php if ( warby_brand_text() ) : ?>
-					<div class="brand-text">
-						<?php if ( get_theme_mod( 'display-site-title', 1 ) ) : ?>
-							<div class="site-title">
+					<div class="brand">
+						<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
+							<?php the_custom_logo(); ?>
+						<?php else : ?>
+							<?php if ( get_theme_mod( 'logo', 0 ) ) : ?>
+							<div class="site-logo">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-									<?php echo get_bloginfo( 'name' ); ?>
+									<img src="<?php echo esc_url( get_theme_mod( 'logo' ) ); ?>" alt="<?php esc_attr( get_bloginfo( 'name' ) ); ?>">
 								</a>
 							</div>
+							<?php endif; ?>
 						<?php endif; ?>
 
-						<?php if ( get_theme_mod( 'display-site-description', 0 ) && get_bloginfo( 'description' ) != '' ) : ?>
-							<div class="site-description"><?php bloginfo( 'description' ); ?></div>
+						<?php if ( warby_brand_text() ) : ?>
+						<div class="brand-text">
+							<?php if ( get_theme_mod( 'display-site-title', 1 ) ) : ?>
+								<div class="site-title">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+										<?php echo get_bloginfo( 'name' ); ?>
+									</a>
+								</div>
+							<?php endif; ?>
+
+							<?php if ( get_theme_mod( 'display-site-description', 0 ) && get_bloginfo( 'description' ) != '' ) : ?>
+								<div class="site-description"><?php bloginfo( 'description' ); ?></div>
+							<?php endif; ?>
+						</div>
 						<?php endif; ?>
 					</div>
+
+					<?php if ( has_nav_menu( 'primary' ) ) : ?>
+					<div id="primary-navigation-section">
+						<nav id="primary-navigation" class="navigation-menu clearfix" role="navigation">
+							<?php wp_nav_menu( array(
+								'theme_location' => 'primary',
+								'link_before' => '<span>',
+								'link_after' => '</span>',
+								'depth' => '2'
+							) ); ?>
+						</nav>
+						<div class="nav-search">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/search.svg" alt="Search" width="20" height="20">
+						</div>
+					</div>
 					<?php endif; ?>
-				</div>
 
-				<?php if ( has_nav_menu( 'primary' ) ) : ?>
-				<div id="primary-navigation-section">
-					<nav id="primary-navigation" class="navigation-menu clearfix" role="navigation">
-						<?php wp_nav_menu( array(
-							'theme_location' => 'primary',
-							'link_before' => '<span>',
-							'link_after' => '</span>',
-							'depth' => '2'
-						) ); ?>
-					</nav>
-				</div>
-				<?php endif; ?>
+				</div><!-- .col-width -->
+			</div><!-- .site-branding -->
+		</header><!-- #masthead -->
 
-			</div><!-- .col-width -->
-		</div><!-- .site-branding -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content clearfix">
-		<div class="col-width clearfix">
+		<div id="content" class="site-content clearfix">
+			<div class="col-width clearfix">

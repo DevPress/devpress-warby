@@ -1,16 +1,7 @@
 // Media Queries
-@mixin media($point) {
 
-	@if $point == desktop {
-		@media ( min-width: 1160px ) { @content; }
-	}
+@mixin min-width($point) {
 
-	@else if $point == tablet {
-		@media ( min-width: 1000px )  { @content; }
-	}
-
-	@else if $point == mobile {
-		@media ( min-width: 510px )  { @content; }
-	}
+	@media ( min-width: $point )  { @content; }
 
 }
